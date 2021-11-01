@@ -29,3 +29,18 @@ a{
 ul{
     list-style: none;
 }
+.unstarted{
+    color: #333333 !important;
+}
+.processing{
+    color: #52C41A !important;
+}
+.pending{
+    color: #FAAD14 !important;
+}
+.pause{
+    color: #5D5FEF !important;
+}
+.finish{
+    color: #256BF4 !important;
+}

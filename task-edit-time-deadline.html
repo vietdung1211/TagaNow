@@ -26,9 +26,12 @@
                         <div class="task-form_header">
                             <div class="title">
                                 <h6>Chi tiết công việc</h6>
-                                <img src="./images/close.png" alt="">
+                                <span>
+                                    <img src="./images/More Circle.png" alt="">
+                                    <img src="./images/close.png" alt="">
+                                </span>
                             </div>
-                            <ul>
+                            <ul class="list-tab">
                                 <li class="active">Thông tin</li>
                                 <li>CV liên quan</li>
                                 <li>Hộp thoại</li>
@@ -38,7 +41,7 @@
                             <div class="box-task box-task_file">
                                 <div class="title">
                                     <div class="box-txt">
-                                        <span>Xin phản hồi về đơn hàng - Khách hàng</span>
+                                        <input type="text" name="" id="" value="Xin phản hồi về đơn hàng - Khách hàng">
                                         <span class="note">#bản gốc</span>
                                     </div>
                                     <div class="box-img">
@@ -53,21 +56,6 @@
                                             <span>Bảng cắt.PDF</span>
                                             <img src="./images/Arrow - bottomCircle.png" alt="" class="close">
                                         </li>
-                                        <li>
-                                            <img src="./images/pdf.png" alt="">
-                                            <span>Packing list.PDF</span>
-                                            <img src="./images/Arrow - bottomCircle.png" alt="" class="close">
-                                        </li>
-                                        <li>
-                                            <img src="./images/pdf.png" alt="">
-                                            <span>Purchasing order.PDF</span>
-                                            <img src="./images/Arrow - bottomCircle.png" alt="" class="close">
-                                        </li>
-                                        <li>
-                                            <img src="./images/pdf.png" alt="">
-                                            <span>Tài liệu khách hàng.PDF</span>
-                                            <img src="./images/Arrow - bottomCircle.png" alt="" class="close">
-                                        </li>
                                     </ul>
                                     <div class="btn-create">
                                         <button class="btn create">Thêm ánh xạ</button>
@@ -80,7 +68,9 @@
                                 <table>
                                     <tr>
                                         <td><img src="./images/Location.png" alt=""><span>Trạng thái:</span></td>
-                                        <td style="color: #52C41A;">Đang thực hiện</td>
+                                        <td>
+                                            <span class="processing">Đang thực hiện</span>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><img src="./images/Profile.png" alt=""><span>Người tạo:</span></td>
@@ -92,11 +82,13 @@
                                     </tr>
                                     <tr>
                                         <td><img src="./images/Calendar.png" alt=""><span>Dự kiến:</span></td>
-                                        <td>8 ngày 8.5 giờ</td>
+                                        <td>
+                                            <span>8 ngày 8.5 giờ</span>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><img src="./images/Time Circle.png" alt=""><span>Deadline:</span></td>
-                                        <td>21/04/2021</td>
+                                        <td><input type="date" name="" id="" value="2021-04-21"></td>
                                     </tr>
                                     <tr>
                                         <td><img src="./images/Time Square.png" alt=""><span>Tiến độ:</span></td>
@@ -181,7 +173,7 @@
 
                             <div class="box-task box-task_member">
                                 <div class="title">
-                                    <span>Nhân sự</span>
+                                    <span>Phản hồi</span>
                                     <!-- <img src="./images/trash.png" alt=""> -->
                                 </div>
                                 <table>
@@ -190,7 +182,7 @@
                                             <img src="./images/Rectangle 296.png" alt="">
                                             <span>Trần Quang Anh</span>
                                         </td>
-                                        <td>
+                                        <td class="active">
                                             <span>Owner</span>
                                         </td>
                                     </tr>
@@ -210,7 +202,7 @@
                                             <span>Trần Quang Anh</span>
                                         </td>
                                         <td>
-                                            <span>Editor</span>
+                                            <span>Commenter</span>
                                             <img src="./images/Arrow - Right 4.png" alt="">
                                         </td>
                                     </tr>
@@ -220,7 +212,7 @@
                                             <span>Trần Quang Anh</span>
                                         </td>
                                         <td>
-                                            <span>Editor</span>
+                                            <span>Reporter</span>
                                             <img src="./images/Arrow - Right 4.png" alt="">
                                         </td>
                                     </tr>
@@ -230,6 +222,29 @@
                                 </div>
                             </div>
 
+                            <div class="box-task box-task_feedback">
+                                <div class="title">
+                                    <span>Nhân sự</span>
+                                    <!-- <img src="./images/trash.png" alt=""> -->
+                                </div>
+                                <ul>
+                                    <li>
+                                        <p class="feedback-title">
+                                            <span class="title_name">Lê Hoàng Anh</span>
+                                            <span class="title_date">14:48 24/04/2021</span>
+                                        </p>
+                                        <p class="feedback-desc">File báo giá cho khách đây nhé a</p>
+                                        <div class="file-btn">
+                                            <img src="./images/pdf.png" alt="">
+                                            <span>Tài liệu khách hàng.PDF</span>
+                                            <img src="./images/Arrow - bottomCircle.png" alt="" class="close">
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="box-task_btn">
+                                    <button class="btn">Thêm phản hồi</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
