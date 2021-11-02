@@ -551,7 +551,21 @@ ul.list-menu-gantt {
         }
     }
 }
-
+.task-form_body{
+    .notification{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        width: 100%;
+        font-size: 15px;
+        line-height: 22px;
+        font-family: Montserrat-Medium;
+        text-align: center;
+        color: #8C8C8C;
+    }
+}
 .box-task {
     background: #FFFFFF;
     border: 0.5px solid #8C8C8C;
@@ -1271,7 +1285,85 @@ button.btn {
     }
 }
 
+.list-task_related{
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 19px;
+        .box-txt{
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            line-height: 23px;
+            letter-spacing: -0.03em;
+            color: #333333;
+            font-family: Montserrat-Medium;
+            img{
+                margin-left: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+    .sub-list-task_related{
+        li{
+            margin-bottom: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            line-height: 17px;
+            font-family: Montserrat-Medium;
+            letter-spacing: 0.02em;
+            color: #595959;
+            .number-stt{
+                margin-right: 33px;
+            }
+            img{
+                cursor: pointer;
+            }
+        }
+    }
+}
+.task-form-chat_footer{
+    border-top: 1px solid #D9D9D9;
+    padding-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .col-right{
+        width: 48px;
+        button{
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    }
+    .col-left{
+        display: flex;
+        align-items: center;
+        width: calc(100% - 48px);
+        label{
+            margin-right: 18px;
+            cursor: pointer;
+        }
+        #chat-upload{
+            display: none;
+        }
+        input{
+            height: 36px;
+            border: none;
+            width: 100%;
+            font-size: 15px;
+            line-height: 22px;
+            font-family: Montserrat-Medium;
+            &::placeholder{
+                color: #8C8C8C;
+            }
+        }
 
+    }
+}
 // ============= End box-task =============
 
 // ============= Start list modal ===========
@@ -1569,6 +1661,33 @@ h1.titlecheck{
             padding: 16px 0;
             border-bottom: 0.5px solid #D9D9D9;
         }
+    }
+}
+
+.task-relared_create{
+    max-width: 766px;;
+    label{
+        font-size: 15px;
+        line-height: 23px;
+        font-family: Montserrat-Medium;
+        letter-spacing: -0.03em;
+        color: #000000;
+        opacity: 0.5;
+        padding-left: 36px;
+        margin-bottom: 8px;
+        display: block;
+    }
+    select{
+        font-size: 15px;
+        line-height: 22px;
+        padding-left: 36px;
+        height: 48px;
+        color: #333333;
+        font-family: Montserrat-Medium;
+        width: 100%;
+        border: 0.5px solid #8C8C8C;
+        border-radius: 28px;
+        margin-bottom: 28px;
     }
 }
 
