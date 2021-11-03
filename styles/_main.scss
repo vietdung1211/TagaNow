@@ -384,22 +384,22 @@ ul.list-menu-gantt {
         height: 100%;
         border-spacing: 0;
 
-        td {
-            width: 100px;
-            height: 22px;
-            font-size: 13px;
-            line-height: 16px;
-            text-align: center;
-            font-family: Montserrat-Medium;
-            color: #8C8C8C;
-        }
-
         thead {
             height: 44px;
 
             tr {
                 td {
                     position: relative;
+                }
+
+                td {
+                    max-width: 100px;
+                    height: 22px;
+                    font-size: 13px;
+                    line-height: 16px;
+                    text-align: center;
+                    font-family: Montserrat-Medium;
+                    color: #8C8C8C;
                 }
 
                 &:nth-child(1) {
@@ -416,6 +416,7 @@ ul.list-menu-gantt {
 
                 &:nth-child(2) {
                     td {
+                        max-width: 100px;
                         border-top: 1px solid #D9D9D9;
                         border-bottom: 1px solid #D9D9D9;
                         border-left: 0.5px solid #D9D9D9;
@@ -453,6 +454,145 @@ ul.list-menu-gantt {
         }
 
         tbody {
+
+            tr {
+                
+                td {
+                    max-width: 100px !important;
+                }
+
+                td:nth-child(4),
+                td:nth-child(8),
+                td:nth-child(9),
+                td:nth-child(11) {
+                    position: relative;
+
+                    .segment-1 {
+                        position: absolute;
+                        top: 14px;
+                        left: 0;
+                        width: 800px;
+                        height: 12px;
+                        background-color: $grantt-color-blue-1;
+
+                        .left-segment {
+                            position: absolute;
+                            width: 254px;
+                            height: inherit;
+                            background-color: $grantt-color-blue-2;
+                        }
+
+                        .triangle {
+                            position: absolute;
+                            top: 12px;
+                        }
+
+                        .triangle-left {
+                            left: 0;
+                            width: 0;
+                            height: 0;
+                            border-top: 12px solid $grantt-color-blue-2;
+                            border-right: 12px solid transparent;
+                        }
+
+                        .triangle-right {
+                            right: 0;
+                            width: 0;
+                            height: 0;
+                            border-top: 12px solid $grantt-color-blue-1;
+                            border-left: 12px solid transparent
+                        }
+
+                        .text {
+                            position: absolute;
+                            width: 95px;
+                            right: -111px;
+                            color: $grantt-color-text;
+                            font-family: 'Montserrat-Regular';
+                            font-size: 13px;
+                            font-weight: 500;
+                            line-height: 15.85px;
+                        }
+                    }
+
+                    .segment-2 {
+                        // position: absolute;
+                        width: 500px;
+                        height: 12px;
+                        top: 57px;
+                        // background-color: $grant-color-blue-1;
+
+                        .left-segment {
+                            // position: absolute;
+                            width: 134px;
+
+                        }
+                    }
+
+                    .segment-3 {
+                        width: 200px;
+                        height: 16px;
+                        top: 105px;
+                        background-color: $grantt-color-grey-4;
+                        border-radius: 6px;
+
+                        .left-segment {
+                            width: 119px;
+                            background-color: $grantt-color-grey-5;
+                            border-radius: 6px;
+                        }
+                    }
+
+                    .segment-4 {
+                        width: 100px;
+                        height: 16px;
+                        top: 195px;
+                        background-color: $grantt-color-grey-4;
+                        border-radius: 6px;
+                    }
+
+                    .segment-5 {
+                        width: 300px;
+                        height: 12px;
+                        top: 235px;
+
+                        .triangle-left {
+                            border-top: 12px solid $grantt-color-blue-1;
+                            border-right: 12px solid transparent;
+                        }
+                    }
+
+                    .segment-6 {
+                        width: 100px;
+                        height: 16px;
+                        top: 285px;
+                        background-color: $grantt-color-grey-4;
+                        border-radius: 6px;
+                    }
+
+                    .segment-7 {
+                        width: 200px;
+                        height: 16px;
+                        top: 330px;
+                        right: 0;
+                        left: unset;
+                        background-color: $grantt-color-grey-4;
+                        border-radius: 6px;
+                    }
+
+                    .recangle {
+                        position: absolute;
+                        top: 146px;
+                        left: -8px;
+                        width: 16px;
+                        height: 16px;
+                        transform: rotate(45deg);
+                        background-color: $grantt-color-orange;
+                    }
+                }
+
+            }
+
             td {
                 &.active {
                     background: #F5F5F5;
@@ -801,3 +941,196 @@ button.btn {
 }
 
 // ============= End box-task =============
+
+// ============= Start modal-box1-1 =======
+.modal-box-1 {
+    font-family: 'Montserrat-Regular';
+    width: 766px;
+    height: 800px;
+    margin: 64px;
+    padding: 0 36px;
+    border: 1px solid #e5e5e5; //can be deleted.
+    border-radius: 24px;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 36px 0 24.08px;
+
+        .forward-btn {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 15px;
+
+            img {
+                margin-right: 16px;
+            }
+        }
+
+        .btn-off {
+            background: none;
+            border: none;
+            outline: none;
+        }
+    }
+
+    .main-box {
+
+        h6 {
+            font-size: 15px;
+            font-weight: 500;
+            color: $grantt-color-grey-5;
+            margin: 0 0 8px 36px;
+        }
+
+        .name-holder {
+            display: flex;
+            align-items: center;
+            height: 48px;
+            padding: 5px 10px 5px 10px;
+            box-shadow: 0 0 0 0.5px $grantt-color-grey-5 inset;
+            border-radius: 28px;
+
+            .name-item {
+                display: flex;
+                align-items: center;
+                height: 39px;
+                padding: 6px 8px;
+                background: $bg-color-grey-2;
+                border-radius: 16px;
+
+                .item-img {
+                    width: 27px;
+                    height: 27px;
+                    margin-right: 8px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .item-main {
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: $primary-text-color;
+                    margin-right: 8px;
+                }
+
+                .item-cancel {
+                    width: 18px;
+                    height: 18px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .name-item:not(:first-child) {
+                margin-left: 10px;
+            }
+        }
+
+        .box-input {
+            height: 256px;
+            display: flex;
+            flex-direction: column;
+            margin: 24px 0px;
+            padding-bottom: 16px;
+            overflow-y: scroll;
+            border-bottom: 1px solid $border-color;
+
+            .input-item {
+                display: flex;
+                align-items: center;
+                padding: 10px 0 6px 36px;
+
+                input[type="checkbox"] {
+                    margin-right: 12px;
+                }
+                
+                .item-avt {
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 12px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .item-name {
+                    font-size: 13px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .attachment {
+            width: 251px;
+            height: 40px; 
+            margin-bottom: 8px;
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        textarea {
+            width: 694px;
+            height: 160px;
+            border-radius: 28px;
+            margin-bottom: 24px;
+        }
+
+        ::placeholder {
+            padding: 12px 0 0 35px;
+            font-family: 'Montserrat-Regular';
+            font-size: 15px;
+            font-weight: 500;
+        }
+    }
+
+    .box-btn {
+        text-align: center;
+
+        .btn {
+            padding: 8px 24px;
+            height: 48px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+        }
+
+        .btn-cancel {
+            width: 230px;
+            margin-right: 16px;
+            background: $bg-color-grey-2;
+            color: $grantt-color-grey-5;
+
+        }
+
+        .btn-forward {
+            width: 234px;
+            background: $bg-color-blue-1;
+            color: $white;
+        }
+    }
+}
+
+// ============= End modal-box-1 =======
+
+// ============= Start modal-box-2 =======
+.modal-box-2 {
+    height: 615px;
+
+   .main-box {
+
+        .attachment {
+            width: 100%;
+        }
+   }
+}
+// ============= End modal-box-2 =======
