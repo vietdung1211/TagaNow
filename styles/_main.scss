@@ -43,7 +43,7 @@ ul.list-menu-gantt {
     }
 }
 
-.list-gantt-header {
+div.list-gantt-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1072,10 +1072,20 @@ button.btn {
             width: 251px;
             height: 40px; 
             margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            border: 0.5px solid $border-color-5;
+            border-radius: 24px;
+            font-size: 14px;  
             
             img {
-                width: 100%;
+                margin-right: 16px;
             }
+        }
+
+        .attachment-text {
+            border: none;
         }
 
         textarea {
@@ -1134,3 +1144,201 @@ button.btn {
    }
 }
 // ============= End modal-box-2 =======
+
+// ============= Start task-list =======
+.task-list-main {
+    padding: 0 96px 0 36px;
+
+    .list-menu-gantt {
+        margin: 0 0 26px 0;
+    }
+
+    .layout-content {
+        padding-left: 0;
+
+        .list-gantt {
+
+            .task-list-header {
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 0;
+                margin-bottom: 36px;
+            }
+
+            .task-list-body {
+                display: unset;
+
+                .body-title {
+                    display: grid;
+                    grid-template-columns: 60% 18% 17% 5%;
+                    padding: 0 0 16px 36px;
+                    border-bottom: 0.5px solid $border-color-2;
+                    font-family: 'Montserrat-Medium';
+                    font-size: 15px;
+                    color: $text-color-6;
+                }
+
+                .body-main {
+                    margin-top: 16px;
+
+                    .main-item {
+                        display: grid;
+                        grid-template-columns: 60% 18% 17% 5%;
+                        // padding-left: 36px;
+                        align-items: center;
+                        font-family: 'Montserrat-Medium';
+                        font-size: 14px;
+                        color: $text-color-6;
+                        padding: 12px 0px 12px 36px;
+
+                        .item-name {
+                            display: flex;
+                            align-items: center;
+
+                            img {
+                                margin-right: 24px;
+                            }
+                        }
+
+                        .item-more {
+                            position: relative;
+
+                            img {
+                                float: right;
+                            }
+
+                            .more-box {
+                                position: absolute;
+                                text-align: left;
+                                top: 27px;
+                                left: -70%;
+                                /* float: right; */
+                                width: 198px;
+                                height: 112px;
+                                background: $white;
+                                padding: 24px;
+                                box-shadow: 2px 2px 16px -2px #1717170f, 0px 0px 8px -8px #00000014;
+                                border-radius: 16px;
+                                color: $text-color-5;
+                                font-size: 13px;
+                                opacity: 0;
+                                visibility: hidden;
+                                z-index: 99;
+
+                                p:first-child {
+                                    padding-bottom: 16px;
+                                    border-bottom: 1px solid $border-color;
+                                }
+
+                                p:last-child {
+                                    padding-top: 16px;
+                                }
+                            }
+
+                            .more-box-active {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// ============= End task-list ===========
+
+// ============= Start chat-work-modal ===
+//modal-box-3
+.modal-box-3 {
+    height: 888px;
+
+    .main-box {
+
+        .name-input {
+            margin-bottom: 24px;
+
+            input[type="text"] {
+                padding: 12px 36px 12px 0px;
+                width: 100%;
+                border: 0.5px solid $border-color-5;
+                border-radius: 28px;
+            }
+        }
+
+        .box-input {
+            margin-bottom: 282px;
+        }
+    }
+}
+
+.modal-box-4 {
+    font-family: 'Montserrat-Medium';
+    height: 560px;
+
+    .main-box {
+        .name-input {
+            margin-bottom: 10px;
+        }
+
+        .box-input {
+            overflow-y: unset;
+            margin-top: 20px;
+            border-bottom: none;
+            margin-bottom: 24px;
+
+            .input-item {
+                display: flex;
+                justify-content: space-between;
+                padding-left: 46px;
+
+                .item-left {
+                    display: flex;
+                    align-items: center;
+
+                    .item-name {
+                        margin-right: 9.67px;
+                    }
+    
+                    .item-cancel {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    input[type="text"] {
+                        padding: 8px;
+                        width: 428px;
+                        margin-left: -10px;
+                        box-shadow: 0 0 0 1px $border-color-5 inset;
+                        border: none;
+                        outline: none;
+                        border-radius: 3px;
+                    }
+
+                    ::placeholder {
+                        text-align: left;
+                        padding-left: 0px;
+                    }
+                }
+
+                    
+
+                .item-right {
+                    display: flex;
+                    align-items: center;
+                    color: $text-color-5;
+                    
+                    p {
+                        font-size: 15px;
+                        color: $text-color-1;
+                    }
+
+                    img {
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+// ============= End chat-work-modal =====
